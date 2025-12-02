@@ -8,12 +8,18 @@ function App() {
   let [counter , setCounter] = useState(15)
 
   const increment = ()=>{
+    if (counter == 20){
+      return setCounter(20);
+    }
     counter += 1;
     setCounter(counter)
     console.log(counter);
   }
 
   const decrement = ()=>{
+    if (counter == 0){
+      return setCounter(0);
+    }
     counter -= 1;
     setCounter(counter)
     console.log(counter);
