@@ -5,14 +5,16 @@ import './App.css'
 
 function App() {
   
-  let [counter , setCounter] = useState(15)
+  let [counter , setCounter] = useState(1)
 
   const increment = ()=>{
     if (counter == 20){
       return setCounter(20);
     }
-    counter += 1;
-    setCounter(counter)
+    setCounter((counter) => counter + 4)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
     console.log(counter);
   }
 
